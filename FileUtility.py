@@ -22,9 +22,12 @@ def shamirs_split(file_object, n, splits):
 		list = PlaintextToHexSecretSharer.split_secret(text,n,splits)
 	else:
 		return []
+	print(list)
 	for itr in range(splits):
 		hexcode = SecretSharer.split_secret(list[itr][2:],2,3);
 		list[itr] = hexcode
+	print("Hexcode->")
+	print(list)
 	return list
 '''
 Method:
