@@ -1,0 +1,8 @@
+﻿How big should p be? Well, it should be large enough to defend against the known attacks against it. The most efficient attack is NFS; that has been used against numbers on the order of 2^768 (a 232 digit number). It would appear wise to pick a p
+that's considerably bigger than that; around 1024 bits at a minimum, and more realistically at least 1536 bits. Notes:
+What was actually done is use NFS to factor a 232 digit number; NFS can be adjusted to perform discrete logs to bases of the same size without an undue increase of complexity. 
+Now, you said that the connections need be secure for only a few hours. Now, NFS on numbers of that size is a large effort, almost certain to take longer than a few hours. Now, if you really don't care if someone can retrieve the keys after the connection has ended, it might seem safe to use a smaller modulii; I would personally recommend against it. 
+In addition, there's another important point about p
+; p−1 should have a large prime factor q, and you should know what the factorization of p−1 is (so you can pick a value g that is of the order q; that is, the smallest value x>0 where gx=1modp is x=q). If you pick a random prime p, and a random generator g, well, you're probably secure, but you won't be certain (and you'll might leak a few bits of the private exponent if the order of your random g happens to have some small factors).
+
+If you need real security, use an established, audited and thoroughly tested encryption package like PolarSSL, GNUTLS or NaCl. Many established encryption libraries include python bindings.

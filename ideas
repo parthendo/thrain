@@ -24,3 +24,6 @@ How things happened:
 2. We obtain a list of hexadecimal codes, we further break it using shamir's secret. This list of list is the output.
 3. We now encrypt it using various enryption algorithm
 
+
+
+READ ABOUT AES, RFC
