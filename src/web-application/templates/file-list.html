@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>thrain</title>
+</head>
+<body>
+	{% if msg!=''%}
+		<h3 style="color: red">{{msg}}</h3>
+	{%else%}
+		<h3>File Directory</h3>
+		{% for itr in range(length):%}
+			<li><a href="retrieve/file/{{list[itr]}}">{{list[itr]}}</a></li>
+		{% endfor%}
+	{%endif%}
+</body>
+</html>

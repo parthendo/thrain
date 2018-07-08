@@ -29,10 +29,10 @@ OPEN SOCIAL LINKS
 -----------------------------------------------------------------
 '''
 def sendfilepage():
-	webbrowser.open_new(r"https://github.com/parthendo/thrain")
+	webbrowser.open_new(r"http://127.0.0.1:5000/upload-file")
 
 def recievefilepage():
-	webbrowser.open_new(r"https://github.com/parthendo/thrain")
+	webbrowser.open_new(r"http://127.0.0.1:5000/file-directory")
 
 def opengithub(event):
 	webbrowser.open_new(r"https://github.com/parthendo/thrain")

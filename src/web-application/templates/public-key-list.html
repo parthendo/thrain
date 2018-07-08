@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>thrain</title>
+</head>
+<body>
+	{%if msg != ''%}
+		<h3>{{msg}}</h3>
+	{%else%}
+		<table>
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>Uploader</th>
+				</tr>
+			</thead>
+			<tbody>
+					{%for itr in range(length):%}
+					<tr>
+						<td><a href="retrieve/key/{{directory[itr]}}">Click here to download public key</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>{{directory[itr]}}</td>
+					</tr>
+					{%endfor%}
+			</tbody>
+		</table>
+	{%endif%}
+</body>
+</html>

@@ -6,3 +6,5 @@ In addition, there's another important point about p
 ; p−1 should have a large prime factor q, and you should know what the factorization of p−1 is (so you can pick a value g that is of the order q; that is, the smallest value x>0 where gx=1modp is x=q). If you pick a random prime p, and a random generator g, well, you're probably secure, but you won't be certain (and you'll might leak a few bits of the private exponent if the order of your random g happens to have some small factors).
 
 If you need real security, use an established, audited and thoroughly tested encryption package like PolarSSL, GNUTLS or NaCl. Many established encryption libraries include python bindings.
+
+MAN IN THE MIDDLE
