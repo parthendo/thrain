@@ -21,6 +21,8 @@ def allowed_file(filename):
 					PAGE REDIRECTS
 -----------------------------------------------------------
 '''
+def post_upload_redirect():
+	return render_template('post-upload.html')
 
 @app.route('/register')
 def call_page_register_user():
@@ -33,6 +35,10 @@ def back_home():
 @app.route('/')
 def index():
 	return render_template('index.html')
+
+@app.route('/upload-file')
+def call_page_upload():
+	return render_template('upload.html')
 '''
 -----------------------------------------------------------
 				DOWNLOAD KEY-FILE
@@ -82,35 +88,6 @@ def download_f():
 		else:
 			return render_template('file-list.html',msg='',itr=0,length=len(files),list=files)
 
-#Build encrypted file directory
-def start_encryption():
-	return render_template('post-upload.html')
-
-def start_decryption():
-	return render_template('restore_success.html')
-
-@app.route('/return-key/My_Key.pem')
-def return_key():
-	filename = './key/' + list_directory[0]
-	return send_file(filename, attachment_filename='My_Key.pem')
-
-@app.route('/return-file/')
-def return_file():
-	filename = './restored_file/' + list_directory[0]
-	print "****************************************"
-	print list_directory[0]
-	print "****************************************"
-	return send_file(filename, attachment_filename=list_directory[0], as_attachment=True)
-
-
-@app.route('/upload-file')
-def call_page_upload():
-	return render_template('upload.html')
-
-@app.route('/login-user')
-def call_page_login():
-	return render_template('login.html')
-
 '''
 -----------------------------------------------------------
 				UPLOAD ENCRYPTED FILE
@@ -133,7 +110,7 @@ def upload_file():
 		if file:
 			filename = secure_filename(file.filename)
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
-			return start_encryption()
+			return post_upload_redirect()
 		return 'Invalid File Format !'
 
 '''
