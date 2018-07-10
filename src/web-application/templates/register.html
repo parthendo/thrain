@@ -1,18 +1,60 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>thrain - Register</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Character encoding scheme -->
+		<meta charset="UTF-8"> 
+		<title>Thrain - Register</title>
 	</head>
 	<body>
 		<center>
-			<h2>register yourself</h2>
-			<h6>{{ name }}</h6>
-			<form action="/register-new-user" method="POST">
-				<input name="username" type="text" placeholder = "username"required /> <br />
-				<input name="first-name" type="text" placeholder= "first name" required /> <br /> 
-				<input name="last-name" type="text" placeholder= "second name" required /> <br />
-				<input type="submit" />
+			<h2><b>Register yourself</b></h2>
+			<br><h6>{{ name }}</h6>
+			<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click here to register yourself</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Register</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/register-new-user" method="POST">
+				<input name="username" type="text" placeholder = "username" required width="120vw"> <br >
+				<input name="first-name" type="text" placeholder= "first name" required width="20vw"> <br > 
+				<input name="last-name" type="text" placeholder= "second name" required width="20vw"> <br >
+				<br>
+				<input type="submit" class="btn btn-lg btn-info">
 			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+			
 		</center>
 	</body>
 </html>
