@@ -1,10 +1,33 @@
 <html>
+<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Character encoding scheme -->
+		<meta charset="UTF-8"> 
+		<title></title>
+		<style type="text/css">
+			button {
+				color: black;
+				width: 10vw;
+			}
+			button:hover {
+				background-color: darkgrey;
+				width: 10vw;
+			}
+		</style>
+	</head>
 	<body>
 		<center>
 			<h1> thrain </h1><br><br>
-			<h4>Your one-time generated private key is:<br> {{privatekey}}</h4>
-			<p style="color: red">Note: Copy and save this key.<br>For safety purpose, we keep no backup of this key. Refrain yourself from sharing this key</p>
-			<a href="/"><button>Home</button></a>
+			<h3>Your one-time generated private key is:<br><br> {{privatekey}}</h3>
+			<br>
+			<p style="color: red; font-size: 30px"><b>Note: Copy and save this key.<br>For safety purpose, we keep no backup of this key. Refrain yourself from sharing this key</b></p><br>
+			<a href="/"><button class="btn" style="font-size:20px">Home</button></a>
 		</center>
 	</body>
 </html>
