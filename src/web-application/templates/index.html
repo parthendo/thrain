@@ -1,15 +1,55 @@
 <html>
+<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Character encoding scheme -->
+		<meta charset="UTF-8"> 
+		<title>Options for the user</title>
+		<style type="text/css">
+			a:active,a:hover,a:visited,a:link {
+				text-decoration: none;
+				color: black;
+			}
+			button {
+				background-color: white;
+				color :grey;
+				border-radius: 10px;
+			}
+			button:hover {
+				background-color: white;
+				color: black;
+			}
+		</style>
+	</head>
 	<body>
+		<div class="container" style="font-color: #160214">
 		<center>
-			<h1> thrain </h1><br><br>
+			<h1> Thrain</h1><br><br>
 			<table>
 				<tr>
-					<td><a href="upload-file"><button>file-upload</button></a></td>
-					<td><a href="file-directory"><button>file-directory</button></a></td>
-					<td><a href="public-key-directory"><button>download-public-key</button></a></td>
-					<td><a href="register"><button>register-user</button></a></td>
+					<td style="padding: 1px"><a href="upload-file"><button style="font-color: #160214">file-upload</button></a></td>
+					<td style="padding: 1px"><a href="file-directory"><button style="font-color: #160214">file-directory</button></a></td>
+					<td style="padding: 1px"><a href="public-key-directory"><button style="font-color: #160214">download-public-key</button></a></td>
+					<td style="padding: 1px"><a href="register"><button style="font-color: #160214">register-user</button></a></td>
 				</tr>
 			</table>
 		</center>
+		<br><br>
+		<div class="fluid-container" style="font-size:20px;font-color: #160214">
+		<p>The user gets to choose from one of the following options:</p>
+		<br>
+		<ul>
+			<li><i>He gets to upload the file to the cloud in a secured manner.</i></li><br>
+			<li><i>He gets to choose from thelist of all the different files that are present on the cloud provided he has the required credentials for decrypting the file.</i></li><br>
+			<li><i>He can also download public key associated with the user with whom the file transfer is to take place.</i></li><br>
+			<li><i>To upload his file to cloud storage the user needs to be registered so that his file can be shared with the other desired person in an instant.</i></li><br>
+		</ul>
+	</div>
+	</div>
 	</body>
 </html>
