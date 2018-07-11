@@ -4,6 +4,7 @@ from flask import Flask, request, redirect, url_for, render_template, session, s
 from werkzeug.utils import secure_filename
 import DH
 import pickle
+import random
 
 UPLOAD_FOLDER = './media/text-files/'
 UPLOAD_KEY = './media/public-keys/'
@@ -138,7 +139,7 @@ def register_user():
 	username = request.form['username']
 	firstname = request.form['first-name']
 	secondname = request.form['last-name']
-	pin = int(request.form['pin'])
+	pin = int(radom.randint(1,128))
 	pin = pin % 64
 	#Generating a unique private key
 	privatekey = DH.generate_private_key(pin)
@@ -164,4 +165,4 @@ def register_user():
 
 	
 if __name__ == '__main__':
-	app.run(debug = True)
+	app.run(host="0.0.0.0", port=80)
