@@ -139,7 +139,7 @@ def register_user():
 	username = request.form['username']
 	firstname = request.form['first-name']
 	secondname = request.form['last-name']
-	pin = int(radom.randint(1,128))
+	pin = int(random.randint(1,128))
 	pin = pin % 64
 	#Generating a unique private key
 	privatekey = DH.generate_private_key(pin)
