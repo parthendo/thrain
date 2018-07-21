@@ -63,9 +63,6 @@ def iv():
     return chr(0) * 16
 
 class AESCipher(object):
-    """
-    https://github.com/dlitz/pycrypto
-    """
 
     def __init__(self, key):
         self.key = key
