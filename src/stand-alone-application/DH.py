@@ -50,22 +50,3 @@ def generate_secret(private_key, public_key):
 	key.update(bytes(secret_bytes))
 	secretKey = key.hexdigest()
 	return secretKey	
-
-'''
-if __name__ == '__main__':
-	config(1,2,3)
-	a_private = generate_private_key(16)
-	b_private = generate_private_key(16)
-	a_public = generate_public_key(a_private)
-	b_public = generate_public_key(b_private)
-	#print '*',a_public,a_private
-	#print '**',b_public,b_private
-	secret_a = generate_secret(a_private,b_public)
-	#print secret_a
-	secret_b = generate_secret(b_private,a_public)
-	#print secret_b
-	if secret_a == secret_b:
-		print("It works!")
-	else:
-		print("Ooooops...")
-'''
