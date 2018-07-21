@@ -55,22 +55,19 @@ This implementation can be explained in two parts
 
 ### stand-alone-application
 
-![stand-alone-application](https://github.com/parthendo/thrain/tree/master/dump/images/GUI.PNG)</br>
+![stand-alone-application](https://github.com/parthendo/thrain/tree/master/dump/images/GUI.PNG) </br>
 
 * This portion deals with encryption and decryption of file
 * The file is encrypted using AES algorithm
 * *Menu* option also helps to toggle the menu to upload and download files</br></br>
 
-**src/stand-alone-application/DH.py**:  This file deals with generating keys using diffie-hellman. It generates three keys:</br>
-* Private Key
-* Public Key
-* Secret Key (used for encryption and decryption)
+**src/stand-alone-application/DH.py**:  This file deals with generating keys using diffie-hellman. It generates three keys: Private Key, Public Key, Secret Key (used for encryption and decryption)</br>
 **src/stand-alone-application/ENCDEC.py**: This file is used for encoding and decoding using AES algorithm.</br>
 **src/stand-alone-application/thrain.py**: This file acts as a mediator and connect the main program with other code files.</br>
 **src/stand-alone-application/main.py**: This file deals with the GUI. It is the main file [yeah, trust me!].</br>
 
 ### web-application
-![web-application](https://github.com/parthendo/thrain/tree/master/dump/images/home.png)</br>
+![web-application](https://github.com/parthendo/thrain/tree/master/dump/images/home.png) </br>
 
 Once file is encrypted it has to be uploaded on an online directory. Another directory is needed where public-key of all the users is stored. Thus, we built an online directory and hosted it on cloud. The unique thing about hosting is that dynamic files are being generated while adding a new user or uploading a text file. Thus, we needed a cloud service which could run the program and incorporate the dynamic files. We tried free services like pivotal and heroku but then amazon AWS came to our rescue.</br>
 **src/web-application/app.py** Contains the website in **python-flask** which acts like a directory.
