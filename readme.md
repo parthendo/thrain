@@ -82,9 +82,26 @@ Once file is encrypted it has to be uploaded on an online directory. Another dir
 * Select and create **Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type**
 * While creating the machine, toggle to menu *Configure Security Group* menu.
 * Here, enable port SSH, HTTP, RDP and in port, change *Source* to **Anywhere**
-* Download and keep the **publicKeyPair file**
+* Download and keep the **publicKeyPair.pem file**
 * Install *putty* and *puttygen*
-* Open 
+* Open puttygen, select the publicKeyPair.pem and generate a private key. Now, save it as **Save private key**
+* Open the AWS machine dashboard ad copy the *IPv4 Public IP* of the instance created
+* Open putty
+* In putty, copy the IP in *Host Name(or IP address)*
+* In putty, toggle the SSH>Auth and here, select the *private key* you generated.
+* Click open and voila! The terminal of instance opens
+* -----------------------------------------------------
+* Enter "login as:" ec2-user
+* Enter following command
+* $sudo bash
+* $yum install python-pip
+* $yum install git
+* $pip install flask
+* Now, clone the forked repository on local machine
+* In src/web-application/app.py, comment on line 169 and uncomment line 168
+* Update the github repository
+* On the terminal of instance, clone the repository and enter command
+* $python app.py
 
-
-
+**NOTE**: For instance we have uploaded the screenshots of the process in dump/images.</br>
+**NOTE 2**: This hosting technique is newbie. The project can be accessed by the public IP of the instance. If you have a better approach, please let us know :')
