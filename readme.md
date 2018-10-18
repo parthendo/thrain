@@ -4,7 +4,7 @@ Security on cloud has been a hot topic. Even the tech giants like google and ama
 
 ## Diffie-Hellman Key Exchange
 
-One of the brute approaches for secure transfer can be that *user A* can encrypt the using a key and later the key could be shared with *user B*. This approach can work up to an extent but it always has a risk of **third-party eavesdroppping**. We needed a system in which two users, without knowing the secret key, can independently generate same key at both ends. This key could later be used to encrypt and decrypt the text. The diffie-hellman key exchange algorithm comes into picture.</br></br>
+One of the brute approaches for secure transfer can be that *user A* can encrypt the using a key and later the key could be shared with *user B*. This approach can work up to an extent but it always has a risk of **third-party eavesdroppping**. We needed a system in which two users, without knowing the secret key, can independently generate same key at both ends. This key could later be used to encrypt and decrypt the text. The diffie-hellman key exchange algorithm comes into picture.</br> </br>
 Diffie–Hellman key exchange (DH) is a method of securely exchanging cryptographic keys over a
 public channel and was one of the first public-key protocols named after Whitfield Diffie and
 Martin Hellman. DH is one of the earliest practical examples of public key exchange
