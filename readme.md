@@ -102,3 +102,5 @@ Once file is encrypted it has to be uploaded on an online directory. Another dir
 
 **NOTE**: For instance we have uploaded the screenshots of the process in dump/images.</br>
 **NOTE 2**: This hosting technique is newbie. The project can be accessed by the public IP of the instance. If you have a better approach, please let us know :')
+
+FOr any further queries please fell free to connect to us at hardikgaur@geu.ac.in or parthendo@geu.ac.in
